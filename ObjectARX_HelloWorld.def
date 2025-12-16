@@ -1,0 +1,4 @@
+LIBRARY "ObjectARX_HelloWorld"
+EXPORTS
+	acrxEntryPoint        PRIVATE
+	acrxGetApiVersion     PRIVATE
