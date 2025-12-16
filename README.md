@@ -41,14 +41,14 @@
     acapp.lib;
     acpal.lib;
     ```
-  * **Module Definition File:** `ObjectARX_HelloWorld.def` (See Step 4)
+  * **Module Definition File:** `ObjectARX_HelloWorld.def` (see E.)
 
-## Debugging Setup (F5 Launch)
+### D. Debugging Setup (F5 Launch)
 * **Configuration Properties > Debugging:**
   * **Command:** `...\AutoCAD 2022\acad.exe` (Path to your installed `acad.exe`)
   * **Command Arguments:** `/ld "$(TargetPath)"` (Auto-loads the plugin on launch)
 
-## The Definition File (ObjectARX_HelloWorld.def)
+### E. The Definition File (ObjectARX_HelloWorld.def)
 * **Must be added to Source Files in Solution Explorer and linked in Properties.**
   ```c++
   LIBRARY "ObjectARX_HelloWorld"
