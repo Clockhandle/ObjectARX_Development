@@ -51,7 +51,7 @@
 ### E. The Definition File (ObjectARX_HelloWorld.def)
 * **Must be added to Source Files in Solution Explorer and linked in Properties.**
   ```c++
-  LIBRARY "ObjectARX_HelloWorld"
+  LIBRARY "Your project name."
   EXPORTS
   	acrxEntryPoint        PRIVATE
   	acrxGetApiVersion     PRIVATE
