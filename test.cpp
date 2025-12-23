@@ -1,9 +1,17 @@
+#include "MyDialog.h"
 #include "rxregsvc.h"
 #include "aced.h"
 #include "dbents.h" 
 #include "dbsymtb.h"
 #include "acdb.h"
 #include <dbapserv.h>
+
+static void ShowMyDialog()
+{
+	AFX_MANAGE_STATE(AfxGetStaticModuleState()); //Tell AutoCAD to use MFC's module state
+    MyDialog dlg;
+    dlg.DoModal();
+}
 
 static void MyHelloWorldCommand() {
     acutPrintf(L"\nHello World!");
@@ -75,6 +83,13 @@ acrxEntryPoint(AcRx::AppMsgCode msg, void* appId)
             MyAddLineCommand
 		);
 
+        acedRegCmds->addCommand(
+            L"MY_COMMANDS",
+            L"SHOWMYDIALOG",
+            L"SHOWMYDIALOG",
+            ACRX_CMD_MODAL,
+            ShowMyDialog
+		);
         break;
 
         // CASE 2: Unloading
